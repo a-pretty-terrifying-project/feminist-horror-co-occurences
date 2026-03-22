@@ -16,12 +16,14 @@
         </div>
         <div class="wrapper">
           <div class="page-banner-inner">
-            {{ post.content }}
+            {%- include views/chart.html -%}
           </div>
         </div>
       </section>
     {%- endfor -%}
   </ul>
+
+  {%- include extensions/fade-in-charts.html -%}
 
   <!-- Pagination links -->
   {%- if paginator.posts.size < site.posts.size -%}
